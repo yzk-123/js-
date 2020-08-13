@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 封装一个函数，实现任意数组的排序（从大到小）
+
+    // 声明函数
+    function sort(arr){
+        for(var j=0;j<arr.length-1;j++){
+            for(var i=0; i<arr.length-1-j;i++){
+                if(arr[i]<arr[i+1]){
+                    var temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp
+                }
+            }
+        }
+        return arr;
+    }
+
+    // 调用函数
+    var arr1 = sort([34,56,1,4,7]);
+    console.log(arr1);
+
+
+
+
+
+
+
+
+
+</script>
+</html>

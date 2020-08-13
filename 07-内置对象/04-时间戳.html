@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 时间戳：时间点距离1970-1-1经过了多少毫秒（js）
+
+    // var date  = new Date();
+    // // getTime()
+    // console.log(date.getTime());
+    // // valueOf()
+    // console.log(date.valueOf());
+    // +new Date()
+    // console.log(+new Date("2000-1-1"));
+    // Date.now()
+    // console.log(Date.now());
+
+    // 求你出身到现在经过多少天？
+
+    var nowDate = Date.now();
+    var birthDate = +new Date("1998-2-28");
+
+    var day = Math.ceil((nowDate-birthDate)/1000/60/60/24);
+
+    console.log(day);
+
+
+
+
+    // 3700s ==  1小时1分40秒
+
+    // 转换成还有多少秒
+    // 3700%60==40
+
+    // 转换成还有多少分
+    // 3700/60 == 61.xx分    再取余%60  
+
+    
+
+</script>
+</html>

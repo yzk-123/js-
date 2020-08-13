@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 预解析: 预先 预务  解析
+    // js的代码是要被js解析器执行
+    // 概念: 预解析是在代码被执行之间做了一步操作
+
+    // 预解析->执行
+
+    // 变量的预解析:
+    // 在当前作用域下扫描关键词 var 及 var 之后的变量名
+    // a.如果内存中没有这个变量名,开辟一个新的空间,这个空间里面没有数据
+    // b.如果内存有相同变量名,内存中已经存在相同的变量名称了,已经开辟了空间,不会开辟一个新的空间
+    // var a = 10;
+    // var a = 100;
+    // console.log(a);
+    
+    // 函数的预解析:
+    // 在当前作用域下扫描关键词 function 及 function 之后的函数名
+    // 注意点:只会关注声明式的function ,不关注表达式式的function
+
+    // a.如果内存中没有这个函数名,开辟一个新的空间,这个空间里面保存着函数体的地址
+    // b.如果内存中已经存在相同的函数名(或变量名),不再开辟新的空间了,但是新的函数体的地址会覆盖原函数的地址
+
+    fn()
+    function fn(){
+        console.log('这是旧的函数');
+    }
+
+    function fn(){
+        console.log('这是新的函数');
+    }
+
+   
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

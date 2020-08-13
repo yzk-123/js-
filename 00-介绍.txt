@@ -1,0 +1,241 @@
+1.Javascript概念
+javscript是一门运行在"客户端（浏览器）"，面向对象的，事件驱动的一门编程语言。
+内核：渲染引擎（html css）   解析引擎(js)
+
+2.前端js的分类
+ECMAScript:规定了js的语法 （es3,es5,es6,es7...es10）
+DOM与BOM：webAPI
+
+3.编程的三要素：数据 流程控制 函数
+
+一.数据   
+  a.变量   
+      保存数据  
+      var a = 10;
+      数据在内存中的存储模式
+
+  b.数据类型
+      分为两大类，8小类
+      基本数据类型（值类型）:
+        数值型（Number）,字符串型（String）,布尔型（Boolean）,未定义型（undefined）,空型（null）
+      复杂数据类型（引用类型）
+        对象型Object（时间Date，数学Math...）, 数组Array, 函数型（Function）
+
+      (1)值型（Number）
+        var num = -100;
+        NaN(not a number)  当一个数据向数值型转换时，转换不过去，就转换为NaN
+
+      (2)字符串型（String）
+        var str = "xxxxx "
+        长度:length
+        拼接：+ 
+
+      (3)布尔型（Boolean）
+        var bool = true;
+        var bool = false;
+
+      (4)未定义型（undefined）
+      var abc;
+
+      (5)空型 （null）
+      var nl = null
+
+      (6)数组
+        概念：数据的集合
+
+        创建：a.var arr = new Array()   b.var arr = [];
+        var arr = [1,"pink",true];
+
+        数组的下标（索引）：从0开始
+
+        数组的成员（元素）: 中括号中的每一项
+
+        数组的长度：arr.length
+
+        数组的遍历：
+          for(var i=0; i<arr.length; i++){
+              console.log(arr[i])
+          }
+
+
+      (7) 函数型
+        var fn = function(){}
+
+      (8) 对象型
+        什么是对象？对象（东西）
+        现实中：万物皆对象   js中:一切皆对象
+
+        类：  人类  
+        对象：我们班的班主任
+        
+        概念：对象是无序的属性与方法的集合
+
+        对象的语法：
+
+
+        为什么要将数据类型分为两大类呢？是因为在内存中存储模型不一样
+
+  c.数据类型相互转换
+      (1)转变为字符串型
+        数据.toString()
+        String(数据)
+        数据 + ""
+      (2)转变为数值型
+        parseInt()
+        parseFloat()
+        Number()
+        数据*1,数据/1 数据-0
+        +数据
+      (3)转变为布尔型
+        Boolean()
+    
+  d.运算符 （让数据能进行相互）
+    (1)算术运算符
+         %   ++  --
+         
+    (2)比较运算符
+      > < >= <=  
+      ==   !=
+      ===  !==
+
+    (3)逻辑运算符
+      非 !  取反
+      与 && 所有的条件都为真时，结果才是真
+      或 || 所有的条件中有一个为真时，结果就是真
+
+    (4)赋值运算符
+      =, +=, -=, *=, /=, %=
+
+    (5)三元（三目）运算符
+      var res = 条件表达式 ?  表达式1 : 表达式2
+
+二.流程控制
+  数据 + 流程控制 = 算法
+  分类：顺序  分支  循环
+
+  顺序：代码从上到下执行的
+
+  分支：代码有选择性的执行
+
+    a.单分支  if (条件表达式) {}
+
+    b.双分支  if (条件表达式) {业务逻辑1} else {业务逻辑2}
+      三元表达式 :  条件表达式 ? 业务逻辑1:业务逻辑2
+
+    c.多分支
+
+    d.switch...case  (应用场景:当条件表达式的值是定值时)
+  
+  循环:让代码重复的执行
+
+     a.for:跟计数相关
+
+     b.while
+
+     c.do...while
+
+     d.for...in
+
+  循环中的两个关键词：
+  break  
+  continue
+
+三 函数 （js中函数是一等公民）
+   函数作用：是将相同的业务逻辑封装起来
+
+   函数分为两步：声明与调用
+
+   语法：
+    a.声明：
+    function 函数名(【形参】){
+          函数体
+          【return 返回值】
+    }
+
+    b.调用
+     函数名(【实参】)
+
+
+    结论：函数是可以相互调用的
+    本质？
+
+
+
+内置对象：内核里面已经给我们提供好了一些常见的对象，帮助我们快速开发实现功能
+         我们怎么学习? 背 这些对象有哪些方法与属性
+
+四种常见的内置对象？数学Math   时间Date   数组Array   字符串String  ....
+
+Math:
+  Math.PI 
+  Math.max(1,2,3);
+  Math.min()
+  Math.ceil()
+  Math.floor()
+  Math.round()
+  Math.random()  [0,1)
+
+Date:
+  var date = new Date();
+  date.getFullYear()
+  date.getMonth()
+  date.getDate()
+  date.getDay()
+
+  date.getHours()
+  date.getMinutes()
+  date.getSeconds()
+
+  时间戳：
+  date.getTime()
+  date.valueOf()
+
+  +new Date()
+
+  Date.now()
+
+Array:
+  Array.isArray(数据)
+
+  arr.push()
+  arr.unshift()
+  arr.pop()
+  arr.shift()
+
+  arr.reverse()
+  arr.sort(function(a,b){
+      return a-b;  升
+      return b-a;  降
+  })
+
+  arr.indexOf()
+  arr.lastIndexOf()
+
+  arr.slice(start,end)
+  arr.splice(start,length)
+
+包装类型：
+  var num = 1;     //  var num = new Number(1)
+  var str = "abc"  //  ver str = new String("abc")
+  在js中，一切皆对象
+
+String:
+
+  str.indexOf()
+  str.lastIndexOf()
+
+  str.charAt(索引)
+  str[索引]
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 时间对象 Date是构造函数
+    var date1 = new Date();   //不传参，当前时间的对象
+    var date2 = new Date("2020-5-1");  //传参，参数时间的对象
+
+    // console.log(date1);
+    // console.log(date2);
+
+    // 年，月 ，日 ，周几，时，分，秒
+    console.log(date1.getFullYear());
+    console.log(date1.getMonth()+1);
+    console.log(date1.getDate());
+    console.log(date1.getDay());
+
+    console.log(date1.getHours());
+    console.log(date1.getMinutes());
+    console.log(date1.getSeconds());
+
+
+    function getTime(){
+        var date = new Date();
+        var h = date.getHours().toString().padStart("2","0");
+        var m = date.getMinutes().toString().padStart("2","0");
+        var s = date.getSeconds().toString().padStart("2","0");
+
+        return `${h}:${m}:${s}`;
+        
+    }
+
+    console.log(getTime());
+
+
+
+
+
+
+
+
+
+</script>
+</html>

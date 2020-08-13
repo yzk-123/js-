@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 考点:函数体内也会有预解析
+    // console.log(a);//undefined
+    // var a = 8;
+    // function fn(){  
+    //     // var a;
+    //     // 进入函数体内也有预解析
+    //     console.log(a); //undefined
+    //     var a = 15;
+    // }
+    // fn();
+    // console.log(a);//8
+
+
+    // 预解析+作用域链
+    // console.log(a);//undefined  -> 8 -> 15
+    // var a = 8;
+    // function fn(){
+    //     console.log(a); //8
+    //     a = 15;	
+    // }
+    // fn();
+    // console.log(a);  //15
+
+
+    // 考点:在js中只有函数才能限定作用域 
+    // var a = true; 
+    // function fn(){  //a=undefined -> 10
+    //     if(!a){
+    //         var a = 10;
+    //     }
+    //     console.log(a);
+    // }
+    // fn();
+
+    // 考点: 函数带有参数的预解析
+    // 实参赋值给形参在前还是预解析在前? 实参赋值给形参在前
+    // function fn ( a ) {  //在预解析之间相当于有一个局部变量a=100
+	// 	console.log( a );
+	// 	var a = 10;
+	// 	console.log( a );
+	// }
+    // fn( 100 );
+
+
+    // 考点:函数名与变量名冲突的情况
+    function fn( a ) {  //var a = 100
+		console.log( a );
+		var a = 10;
+		console.log( a );
+		function a () {
+			console.log( a );
+		}
+		a();
+	}
+    fn( 100 );
+
+    
+
+
+
+
+
+
+</script>
+</html>

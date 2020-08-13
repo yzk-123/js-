@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    // 描述十个人的信息  批量的生产对象
+
+    // 工厂函数模式
+    function createObj(a,b,c){
+        var obj = {};
+        obj.name = a;
+        obj.age = b;
+        obj.gender = c;
+        return obj
+    }
+    var p1 = createObj("jack",18,"男")
+    var p2 = createObj("rose",21,"女")
+    console.log(p1);
+    console.log(p2);
+
+    // 构造函数模式
+    function Person(name,age,gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+    var p3 = new Person("tom",4,"male") 
+    var p4 = new Person("jerry",2,"female")
+    console.log(p3);
+    console.log(p4);
+
+    
+
+
+
+
+
+
+</script>
+</html>

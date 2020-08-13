@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 数组的成员从小到大排序：冒泡排序
+    var arr = [22,34,8,7,12,1];
+    // 外层循环 趟数（行）
+    for(var j=0;j<arr.length-1;j++){
+        // 里层循环是：每一趟的比较次数
+        for(var i=0;i<arr.length-1-j;i++){
+            if(arr[i]>arr[i+1]){
+                var temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
+            }
+        }
+    }
+   
+    console.log(arr);
+
+
+</script>
+</html>

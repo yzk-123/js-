@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 生命周期：什么时候出生，什么时候在内存中销毁
+
+    // 全局变量销毁：当浏览器的窗口关闭时
+    var num = 100;
+
+    // 局部变量销毁：当函数调用完毕时，局部变量就在内存中销毁
+
+    function fn(){
+        var a = 1;
+        return a;
+    }
+
+    var res1 = fn()
+    console.log(res1);
+    var res2 = fn()
+    console.log(res2);
+
+    console.log(res1==res2);
+
+
+
+
+
+
+
+</script>
+</html>

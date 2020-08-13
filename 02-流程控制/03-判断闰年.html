@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 判断闰年的算法：能被4整除 且 不能被100整除 或 能被400整除
+
+        var year = 1900;
+
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            alert("闰年")
+        } else {
+            alert("平年")
+        }
+
+    </script>
+</body>
+
+</html>

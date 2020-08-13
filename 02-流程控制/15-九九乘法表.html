@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 九九乘法表
+    var str = "";
+
+    // 核心算法：九九乘法表中每一行与每一列的数量是一致的
+
+    // 外层循环控制行
+    for(var i=1;i<=9;i++){
+        // 内层循环控制列
+        for(var j=1;j<=i;j++){
+            // 3×3=3*3
+            str += `${j}×${i}=${j*i}\t`;
+        }
+        str +="\n";
+
+    }
+
+    console.log(str);
+
+
+
+
+
+
+
+</script>
+</html>

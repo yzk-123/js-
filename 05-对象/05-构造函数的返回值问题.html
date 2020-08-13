@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+
+        // 有一个看不见的return this
+        // return this;
+        // return 123
+        // return [1,2,3]
+    }
+
+    var p = new Person("rose",18)
+    console.log(p);
+
+    // 如果构造函数有return
+
+    // 1.如果返回的是基本数据类型，就忽略这个基本数据类型，返回的还是this
+    // 2.如果返回的是复杂数据类型，忽略this,返回的是该复杂数据类型的数据
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 求两个数的和
+    // function getSum(a,b){
+    //     var c = a+b
+    //     return c;
+    // }
+
+    // var res = getSum(1,2)
+    // console.log(res);
+
+    // 求 任意个数 的和
+
+    // 1.在任意一个函数体的内部(es6箭头函数中没有arguments)，都有一个看不见的对象arguments
+    // 2.arguments是一个伪数组。也有length属性
+    // 3.以伪数组的形式存储了实参   如：arguments === [[1,2,3]]
+
+    function getSum(){
+        console.log(arguments);
+        // var sum = 0;
+        // for(var i=0;i<arguments.length;i++){
+        //     sum += arguments[i];
+        // }
+        // return sum;
+    }
+
+    var result = getSum(1,2,3,4,5);
+    console.log(result);
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

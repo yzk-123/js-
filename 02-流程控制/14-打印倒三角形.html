@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 10*行的倒三角
+
+    var str = "";
+
+    // 核心算法：当行数增加时，每一行的列数(内部循环的次数)是在减少的
+
+    // 算法1：
+    // for(var i=1;i<=10;i++){    
+    //     for(var j=i;j<=10;j++){
+    //         str +="★"
+    //     }
+    //     str +="\n"   
+    // }
+
+    // 算法2:
+    // for(var i=1;i<=10;i++){
+    //     for(var j=1;j<=11-i;j++){
+    //         str +="★"
+    //     }
+    //     str +="\n"   
+    // }
+
+    // 算法3：
+    for(var i=1;i<=10;i++){
+        for(var j=10;j>=i;j--){
+            str +="★"
+        }
+        str +="\n"   
+    }
+
+
+    console.log(str);
+
+
+
+
+
+
+</script>
+</html>

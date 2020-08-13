@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 注意点：字符串的这些方法都会生成一个新的字符串，原字符串不改变
+
+    // concat() 合并
+    var str = "abc";
+    var str1  = str.concat("def");   //str+"def"
+    console.log(str1);
+
+    // *****字符串的截取
+    var str = "我爱武汉小太妹";
+    // substr(start,length) 
+    var str1 = str.substr(2,2)
+    console.log(str1);
+
+    // substring(start,end);
+    var str2 = str.substring(2,2)
+    console.log(str2);
+
+    // *****字符串替换 replace("要替换的字符"[这里也可以写正则表达式],"替换的字符")
+    var str = "我爱武汉小太妹,和大太妹子们";
+    var str1 = str.replace("太妹","可爱")
+    // var str1 = str.replace(/太妹/g,"可爱")
+    console.log(str1);
+
+    // ****字符串的分割  split()  跟数组的方法join()相反
+    var str = "red*green*blue";
+    var arr = str.split("*");
+    console.log(arr);
+
+    // 大小写转换toUpperCase   toLowerCase;
+    var str = "abcDEFG";
+    var str1 = str.toUpperCase();
+    var str2 = str.toLowerCase();
+    console.log(str1);
+    console.log(str2);
+
+
+
+
+</script>
+</html>

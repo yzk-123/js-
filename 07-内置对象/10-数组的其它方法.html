@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // concat   数组的合并
+    // arr.push([1,2,3]) //["red","green","blue",[1,2,3]];
+    var arr = ["red","green","blue","pink","skyblue"];
+    // var newArr = arr.concat([1,2,3])
+
+    // console.log(arr);
+    // console.log(newArr); //["red", "green", "blue", 1, 2, 3]
+
+    // slice(start,end)
+    // var res = arr.slice(1,4);
+    // console.log(arr);
+    // console.log(res);  //['red']
+
+
+    // splice(start,deleteCount)
+    // var res = arr.splice(1)
+    // console.log(arr);
+    // console.log(res);
+
+
+    // 面试题：将原数组按三个数进行截取
+    // [1,2,3,4,5,6,7,8]=>[[1,2,3],[4,5,6],[7,8]]
+
+    var arr = [1,2,3,4,5,6,7,8];
+    var newArr = [];
+
+    while(true){
+        if(arr.length==0){
+            break
+        }
+        var res = arr.splice(0,3);
+        newArr.push(res)
+    }
+
+    console.log(newArr);
+
+
+   
+
+
+
+
+
+</script>
+</html>

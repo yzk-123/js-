@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 求出现最多的字符及次数
+    var str = "aabbac";
+
+    // 核心算法：将该字符转成一个对象
+    // 第一步：变成对象
+    // var o = {
+    //     a:3,
+    //     b:2,
+    //     c:1
+    // }
+    // 第二步：遍历对象找最大值(跟遍历数组找最大值相似)
+
+    var o = {};    // {a:3,b:2,c:1}
+    for(var i=0;i<str.length;i++){
+        // var chars = str.charAt(i);
+        var chars = str[i];
+        if(chars in o){
+            o[chars]++
+        }else{
+            o[chars] = 1;
+        }
+    }
+    // console.log(o); // {b:2,a:3,c:1}
+
+    var max = 0;
+    var ch = ""
+    for(var k in o){
+        if(o[k]>max){
+            max = o[k];
+            ch = k;
+        }
+    }
+
+    console.log(ch,max);
+
+
+   
+     
+
+
+
+
+
+
+
+</script>
+</html>

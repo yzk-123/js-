@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 求出现最多次数的字符及次数
+    var str = "abcabcdefgaaa";
+    // var obj = {
+    //     a:5,
+    //     b:2,
+    //     c:2,
+    //     d:1
+    // }
+    var obj = {};
+
+
+    for(var i=0;i<str.length;i++){
+        if(str[i] in obj){
+            obj[str[i]]++;
+        }else {
+            obj[str[i]]=1;
+        }
+    }
+
+    console.log(obj);
+</script>
+</html>

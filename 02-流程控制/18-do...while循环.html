@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // do while语法：
+    // do {
+    //     循环体;
+    //     退出条件
+    // }while(条件表达式)
+
+    // 案例1：计算1~10;
+    var num = 1;
+    var sum = 0;
+
+    do {
+        sum += num;
+        num++;
+    } while (num <= 10)
+    console.log(sum);
+
+    // 案例2: 弹出提示框 ，你爱我吗？
+    do {
+        var str = prompt("你爱我吗?");
+    } while (str != "我爱你")
+
+    alert("我也爱你");
+
+    // while与do...while的区别：
+    // do...while不管条件表达式是否为真，先执行一次循环体内的代码
+
+
+</script>
+
+</html>

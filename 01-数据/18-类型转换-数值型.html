@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 字
+    // parseInt()   parseFloat()
+
+    console.log(parseInt("80kg")); //180
+    console.log(parseInt("180")); //180
+    console.log(parseInt("abc180"));//NaN
+    console.log(parseInt("120d3"));//120
+    console.log(parseInt(120e2));//120
+
+    console.log(parseFloat("120e2")); //175.2
+
+
+    // Number()
+    console.log(Number("70")); //70
+    console.log(Number("70kg")); //NaN
+
+    // 利用运算符 - * /   隐式转换
+    console.log("20" - 0);
+    console.log("20" * 1);
+
+</script>
+</html>
